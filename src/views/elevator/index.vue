@@ -14,6 +14,10 @@
     </div>
     <div class="waiting-pane">
       <div v-for="(item, index) in waitingAreaList" :key="index" class="waiting-item">
+        <div class="direction-text">
+          <span>上</span>
+          <span>下</span>
+        </div>
         <span>{{ item.floor + '楼' }}</span>
       </div>
     </div>
@@ -64,7 +68,6 @@ const looper = () => {
 }
 const handleStop = () => {
   clearInterval(runner)
-  console.log('liftList.value :>> ', liftList.value)
 }
 onMounted(() => {
   Array.from({ length: liftCount }, () => {
@@ -117,10 +120,15 @@ onMounted(() => {
     flex-direction: column;
     .waiting-item {
       display: flex;
-      padding: 20px;
+      justify-content: space-between;
       margin-bottom: 10px;
       background: #999999;
       @extend .common-size;
+    }
+    .direction-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 12px;
     }
   }
 }
