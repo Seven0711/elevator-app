@@ -70,12 +70,12 @@ const handleStop = () => {
   clearInterval(runner)
 }
 onMounted(() => {
-  Array.from({ length: liftCount }, () => {
-    liftList.value.push({ direction: 'UP', account: 0, floor: 1 })
-  })
-  Array.from({ length: floorCount }, (_, index) => {
-    waitingAreaList.value.push({ direction: 'UP', account: 0, floor: floorCount - index })
-  })
+  // Array.from({ length: liftCount }, () => {
+  //   liftList.value.push({ direction: 'UP', account: 0, floor: 1 })
+  // })
+  // Array.from({ length: floorCount }, (_, index) => {
+  //   waitingAreaList.value.push({ direction: 'UP', account: 0, floor: floorCount - index })
+  // })
   looper()
 })
 </script>

@@ -5,3 +5,5 @@
  */
 // 电梯的运行方向
 export type DirectionType = 'UP' | 'DOWN'
+export type DoorStatusType = 'CLOSE' | 'OPEN'
+export type LiftStatusType = 'STOP' | 'RUN'
