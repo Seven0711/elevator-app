@@ -16,6 +16,11 @@ export default class ElevatorClass implements Elevator.LiftType {
     this.direction = liftConfig.direction
     this.termini = liftConfig.termini
     this.timer = liftConfig.timer
+  }
+  update(): void {
 
   }
 };
+// const el = new ElevatorClass({floor: 1, maxNum: 4, account: 0, direction: 'UP', doorStatus: 'CLOSE', liftStatus: 'STOP'})
+//
+// 电梯状态
